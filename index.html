@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/21aae1698b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="music-player-wrapper" id="music-player-wrapper">
+        <div class="music-player-bar">
+          <nav>
+            <div></div>
+            <div class="circle" onclick="showPlaylist()">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+          </nav>
+        </div>
+        <div class="music-player-content" id="music-player-content">
+          <div id="music-player" class="music-player">
+            <img
+              src=""
+              id="song-img"
+              class="song-img"
+              width="300"
+              height="300"
+            />
+            <audio
+              controls
+              class="audio"
+              id="audio"
+              onplay="onPlayPause(event)"
+              onpause="onPlayPause(event)"
+            >
+              <source src="" id="audio-src" type="audio/mp3" />
+            </audio>
+            <p id="song-name" class="song-name"></p>
+            <div class="music-player-buttons">
+              <div class="circle" id="previous-song" onclick="playSong(event);">
+                <i
+                  class="fa-solid fa-backward-step fa-2xl"
+                  style="color: black"
+                  ;
+                ></i>
+              </div>
+              <div
+                id="play-pause-song"
+                class="circle"
+                onclick="playSong(event);"
+              >
+                <i
+                  id="play-pause-icon"
+                  class="fa-solid fa-play fa-2xl"
+                  style="color: black"
+                  ;
+                ></i>
+              </div>
+              <div class="circle" id="next-song" onclick="playSong(event)">
+                <i
+                  class="fa-solid fa-forward-step fa-2xl"
+                  style="color: black"
+                  ;
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
